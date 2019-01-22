@@ -14,6 +14,31 @@ public class Main {
         char firstLetter = s.charAt(0);
         System.out.println(firstLetter); // Returns D
 
+        // Get location of specific string or character
+        String name = "Doug Winnie";
+        int space = name.indexOf(" ");
+        System.out.println(space);
+
+        // Get location of specific string or character from a custom start point
+        String state = "Mississippi";
+        int start = 0;
+        boolean loop = true;
+
+        do {
+            int index = state.indexOf('i',start);
+            System.out.println(index);
+            if (index >= 0) {
+                start = index + 1;
+            } else {
+                loop = false;
+            }
+        } while (loop);
+        
+        // Get the last location of a specific string or character
+        String name = "Doug Winnie";
+        int ichar = name.lastIndexOf('i');
+        System.out.println(ichar);
+
         // Getting a substring from the end
         String sub = s.substring(1);
         System.out.println(sub); // Returns oug
